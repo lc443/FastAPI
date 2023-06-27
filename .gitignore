@@ -1,6 +1,2 @@
 __pycache__/
 .vscode/
-FastApi-database/__pycache__/
-FastApi-database/.vscode/
-FastApi-local/__pycache__/
-FastApi-local/.vscode/
