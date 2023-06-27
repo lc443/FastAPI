@@ -11,3 +11,6 @@
  ```
  uvicorn main:app --reload
  ```
+
+ - accessing your api via swagger 
+ http://localhost:8000/docs
