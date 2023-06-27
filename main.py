@@ -1,5 +1,5 @@
 from typing import List
-from uuid import UUID,  uuid4
+from uuid import UUID, uuid4
 from fastapi import HTTPException, FastAPI
 from models import Gender, Role, User, UserUpdateRequest
 
@@ -12,35 +12,35 @@ hardcoded_db: List[User] = [
         first_name="Jamila",
         last_name="Ahmed",
         gender=Gender.female,
-        roles=[Role.student]
+        roles=[Role.student],
     ),
-
-        User(
+    User(
         id=UUID("eb3c829a-3bd4-4ccf-a670-169ef5f6d4fa"),
         first_name="Alex",
         last_name="Jones",
         gender=Gender.male,
-        roles=[Role.admin, Role.user]
+        roles=[Role.admin, Role.user],
     ),
-
     User(
         id=uuid4(),
         first_name="Collin",
         last_name="Robinson",
         gender=Gender.male,
-        roles=[Role.admin, Role.user, Role.student]
-    )
-
+        roles=[Role.admin, Role.user, Role.student],
+    ),
 ]
-    
+
+
 @app.get("/")
 async def root():
-    return  {"Hello": "World"}
+    return {"Hello": "World"}
+
 
 # GET ALL
 @app.get("/api/v1/users")
 async def get_users():
     return hardcoded_db
+
 
 # POST ONE
 @app.post("/api/v1/users")
@@ -49,21 +49,22 @@ async def register_user(user: User):
     hardcoded_db.append(user)
     return user
 
+
 # DELETE ONE
 @app.delete("/api/v1/users/{user_id}")
 async def delete_user(user_id: UUID):
-   for user in hardcoded_db:
-       if user.id == user_id:
-           hardcoded_db.remove(user)
-           return
-   raise HTTPException(
-       status_code=404,
-       detail=f"user with id: {user_id} does not exists"
+    for user in hardcoded_db:
+        if user.id == user_id:
+            hardcoded_db.remove(user)
+            return
+    raise HTTPException(
+        status_code=404, detail=f"user with id: {user_id} does not exists"
     )
+
 
 # Update one
 @app.put("/api/v1/users/{user_id}")
-async def update_user(user_update: UserUpdateRequest, user_id: UUID): 
+async def update_user(user_update: UserUpdateRequest, user_id: UUID):
     for user in hardcoded_db:
         if user.id == user_id:
             if user_update.first_name is not None:
@@ -78,8 +79,5 @@ async def update_user(user_update: UserUpdateRequest, user_id: UUID):
                 user.roles = user_update.roles
         return user
     raise HTTPException(
-        status_code=404,
-         detail=f"user with id: {user_id} does not exists"
+        status_code=404, detail=f"user with id: {user_id} does not exists"
     )
-
-
