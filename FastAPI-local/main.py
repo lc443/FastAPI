@@ -5,7 +5,6 @@ from models import Gender, Role, User, UserUpdateRequest
 
 app = FastAPI()
 
-
 hardcoded_db: List[User] = [
     User(
         id=UUID("b496140f-fec0-40d1-9c4e-f2a7e8ad41a9"),
