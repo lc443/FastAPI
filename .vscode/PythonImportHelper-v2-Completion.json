@@ -1,0 +1,167 @@
+[
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "UserUpdateRequest",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "FastAPI-local.main",
+        "description": "FastAPI-local.main",
+        "peekOfCode": "app = FastAPI()\nhardcoded_db: List[User] = [\n    User(\n        id=UUID(\"b496140f-fec0-40d1-9c4e-f2a7e8ad41a9\"),\n        first_name=\"Jamila\",\n        last_name=\"Ahmed\",\n        gender=Gender.female,\n        roles=[Role.student],\n    ),\n    User(",
+        "detail": "FastAPI-local.main",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "kind": 6,
+        "importPath": "FastAPI-local.models",
+        "description": "FastAPI-local.models",
+        "peekOfCode": "class Gender(str, Enum):\n    male =  \"male\"\n    female = \"female\"\nclass Role(str, Enum):\n    admin =  \"admin\"\n    user = \"user\"\n    student = \"student\"\nclass User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: str",
+        "detail": "FastAPI-local.models",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "FastAPI-local.models",
+        "description": "FastAPI-local.models",
+        "peekOfCode": "class Role(str, Enum):\n    admin =  \"admin\"\n    user = \"user\"\n    student = \"student\"\nclass User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: str\n    last_name: str\n    middle_name: Optional[str]\n    gender:  Gender",
+        "detail": "FastAPI-local.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "FastAPI-local.models",
+        "description": "FastAPI-local.models",
+        "peekOfCode": "class User(BaseModel):\n    id: Optional[UUID] = uuid4()\n    first_name: str\n    last_name: str\n    middle_name: Optional[str]\n    gender:  Gender\n    roles: List[Role]\nclass UserUpdateRequest(BaseModel):\n    first_name: Optional[str]\n    last_name: Optional[str]",
+        "detail": "FastAPI-local.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserUpdateRequest",
+        "kind": 6,
+        "importPath": "FastAPI-local.models",
+        "description": "FastAPI-local.models",
+        "peekOfCode": "class UserUpdateRequest(BaseModel):\n    first_name: Optional[str]\n    last_name: Optional[str]\n    middle_name: Optional[str]\n    gender: Optional[Gender]\n    roles: Optional[List[Role]]",
+        "detail": "FastAPI-local.models",
+        "documentation": {}
+    }
+]
