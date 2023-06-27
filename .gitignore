@@ -2,8 +2,8 @@
 __pycache__/
 .vscode/
 
-fastApi-database/__pycache__/
-fastApi-database/.vscode/
+FastApi-database/__pycache__/
+FastApi-database/.vscode/
 
-fastApi-local/__pycache__/
-fastApi-local/.vscode/
+FastApi-local/__pycache__/
+FastApi-local/.vscode/
